@@ -29,6 +29,8 @@
         "transform-loader": "^0.2.4"
     },
     "dependencies": {
+        "lodash": "^4.17.15",
+        "moment": "^2.24.0",
         "orbs-client-sdk": "2.3.1"
     }
 }

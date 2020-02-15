@@ -27,7 +27,7 @@ describe("Weatherman", () => {
 		await deployWeatherman(getClient(signer), contractName);
 		const weatherman = new Weatherman(getClient(signer), contractName);
 
-		const defaultValue = await weatherman.weather("QmeQv9kHWefgfcGstg2TBZZuQA2FCC1r2Co8fh1QWQSYMa");
-		expect(defaultValue.type).to.be.eql("Feature");
+		const defaultValue = await weatherman.weather("QmeQv9kHWefgfcGstg2TBZZuQA2FCC1r2Co8fh1QWQSYMa", 24);
+		expect(Object.keys(defaultValue).length).to.be.eql(2);
 	});
 });

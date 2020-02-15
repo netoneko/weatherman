@@ -43,12 +43,13 @@ class Weatherman {
 		return receipt.outputArguments[0].value;
 	}
 
-	async weather(hash) {
+	async weather(hash, hours) {
 		const query = await this.client.createQuery(
 			this.contractName,
 			"weather",
 			[
-				argString(hash)
+				argString(hash),
+				argUint32(hours)
 			]
 		);
 
