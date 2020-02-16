@@ -3,9 +3,12 @@ import moment from "moment";
 
 export let weatherman;
 let forecasts = [];
+let updatedAt = null;
+let hash = "";
 
 (async () => {
-    forecasts = await weatherman.weather("QmYenYjdgvqV9jdDyTnBUs84TiayAyiCX9EokZZ9Fp1PmK", 12);
+    [hash, updatedAt] = await weatherman.getDatasource();
+    forecasts = await weatherman.getWeather(hash, 12);
 })();
 
 const resizeIcon = (icon, size) => icon.replace("small", size);

@@ -4,28 +4,30 @@ import (
 	"encoding/json"
 	"time"
 	"github.com/orbs-network/orbs-contract-sdk/go/sdk/v1"
+	"github.com/orbs-network/orbs-contract-sdk/go/sdk/v1/env"
 	"github.com/orbs-network/orbs-contract-sdk/go/sdk/v1/ipfs"
 	"github.com/orbs-network/orbs-contract-sdk/go/sdk/v1/state"
 )
 
-var PUBLIC = sdk.Export(add, value, weather)
+var PUBLIC = sdk.Export(updateDatasource, getDatasource, getWeather)
 var SYSTEM = sdk.Export(_init)
 
-var COUNTER_KEY = []byte("counter")
+var DATASOURCE = []byte("datasource")
+var UPDATED_AT = []byte("updated_at")
 
 func _init() {
 
 }
 
-func add(i uint64) uint64 {
-	v := value() + i
-	state.WriteUint64(COUNTER_KEY, v)
-
-	return v
+func updateDatasource(hash string) {
+	state.WriteString(DATASOURCE, hash)
+	state.WriteUint64(UPDATED_AT, env.GetBlockTimestamp())
 }
 
-func value() uint64 {
-	return state.ReadUint64(COUNTER_KEY)
+func getDatasource() (hash string, updatedAt uint64) {
+	hash = state.ReadString(DATASOURCE)
+	updatedAt = state.ReadUint64(UPDATED_AT)
+	return 
 }
 
 type Forecast struct {
@@ -39,7 +41,7 @@ type Forecast struct {
 	Icon string
 }
 
-func weather(hash string, hours uint32) string {
+func getWeather(hash string, hours uint32) string {
 	rawData := ipfs.Read(hash)
 	data := make(map[string]interface{})	
 	json.Unmarshal(rawData, &data)

@@ -1,4 +1,5 @@
 const { argString, argBytes, argUint64, argUint32 } = require("orbs-client-sdk");
+const { map } = require("lodash");
 
 function getErrorFromReceipt(receipt) {
     const value = receipt.outputArguments.length == 0 ? receipt.executionResult : receipt.outputArguments[0].value;
@@ -11,12 +12,12 @@ class Weatherman {
 		this.contractName = contractName;
 	}
 
-	async add(n) {
+	async updateDatasource(hash) {
 		const [ tx, txId ] = await this.client.createTransaction(
 			this.contractName,
-			"add",
+			"updateDatasource",
 			[
-				argUint64(n)
+				argString(hash)
 			]
 		);
 
@@ -24,14 +25,12 @@ class Weatherman {
 		if (receipt.executionResult !== 'SUCCESS') {
 			throw getErrorFromReceipt(receipt);
 		}
-
-		return receipt.outputArguments[0].value;
 	}
 
-	async value() {
+	async getDatasource() {
 		const query = await this.client.createQuery(
 			this.contractName,
-			"value",
+			"getDatasource",
 			[]
 		);
 
@@ -40,13 +39,13 @@ class Weatherman {
 			throw getErrorFromReceipt(receipt);
 		}
 
-		return receipt.outputArguments[0].value;
+		return map(receipt.outputArguments, "value");
 	}
 
-	async weather(hash, hours) {
+	async getWeather(hash, hours) {
 		const query = await this.client.createQuery(
 			this.contractName,
-			"weather",
+			"getWeather",
 			[
 				argString(hash),
 				argUint32(hours)
