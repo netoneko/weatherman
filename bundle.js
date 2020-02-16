@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".centered.svelte-12tuvoj.svelte-12tuvoj{position:fixed;top:50%;left:50%;transform:translate(-50%, -50%)}.forecast.svelte-12tuvoj.svelte-12tuvoj{border-collapse:collapse}.forecast.svelte-12tuvoj td.svelte-12tuvoj{padding:5px}.time.svelte-12tuvoj td.svelte-12tuvoj{background-color:#e2c044}.icons.svelte-12tuvoj.svelte-12tuvoj{background-color:whitesmoke}.icons.svelte-12tuvoj td img.svelte-12tuvoj{display:block;margin-left:auto;margin-right:auto}.temperature.svelte-12tuvoj.svelte-12tuvoj{font-size:2em;background-color:#587b7f;color:white}.short.svelte-12tuvoj.svelte-12tuvoj{background-color:#587b7f;color:white}a.svelte-12tuvoj.svelte-12tuvoj{color:#1e2019}", ""]);
+exports.push([module.i, ".centered.svelte-kstq54{margin:0 auto;max-width:calc(6.5*120px)}.all-forecasts.svelte-kstq54{max-width:calc(6.5*120px)}.forecast.svelte-kstq54{padding:5px;width:120px;display:inline-block}.time.svelte-kstq54{background-color:#e2c044;padding:5px}.icons.svelte-kstq54{background-color:whitesmoke}.icons.svelte-kstq54{display:block;margin-left:auto;margin-right:auto}.temperature.svelte-kstq54{font-size:2em;background-color:#587b7f;color:white;padding:5px}.short.svelte-kstq54{background-color:#587b7f;color:white;padding:5px}a.svelte-kstq54{color:#1e2019}", ""]);
 
 
 
@@ -37241,37 +37241,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-function get_each_context_1(ctx, list, i) {
-	const child_ctx = ctx.slice();
-	child_ctx[10] = list[i].StartTime;
-	child_ctx[11] = list[i].IsDaytime;
-	child_ctx[12] = list[i].Temperature;
-	child_ctx[13] = list[i].ShortForecast;
-	child_ctx[14] = list[i].Icon;
-	return child_ctx;
-}
-
-function get_each_context_2(ctx, list, i) {
-	const child_ctx = ctx.slice();
-	child_ctx[10] = list[i].StartTime;
-	child_ctx[11] = list[i].IsDaytime;
-	child_ctx[12] = list[i].Temperature;
-	child_ctx[13] = list[i].ShortForecast;
-	child_ctx[14] = list[i].Icon;
-	return child_ctx;
-}
-
-function get_each_context_3(ctx, list, i) {
-	const child_ctx = ctx.slice();
-	child_ctx[10] = list[i].StartTime;
-	child_ctx[11] = list[i].IsDaytime;
-	child_ctx[12] = list[i].Temperature;
-	child_ctx[13] = list[i].ShortForecast;
-	child_ctx[14] = list[i].Icon;
-	return child_ctx;
-}
-
-// (79:0) {#if updatedAt}
+// (85:0) {#if updatedAt}
 function create_if_block_1(ctx) {
 	let p;
 	let t0;
@@ -37289,7 +37259,7 @@ function create_if_block_1(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]));
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "target", "_blank");
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "title", "source data");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "svelte-12tuvoj");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "svelte-kstq54");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, p, anchor);
@@ -37308,37 +37278,9 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (84:0) {:else}
+// (90:0) {:else}
 function create_else_block(ctx) {
-	let table;
-	let tr0;
-	let t0;
-	let tr1;
-	let t1;
-	let tr2;
-	let t2;
-	let tr3;
-	let each_value_3 = /*forecasts*/ ctx[0];
-	let each_blocks_3 = [];
-
-	for (let i = 0; i < each_value_3.length; i += 1) {
-		each_blocks_3[i] = create_each_block_3(get_each_context_3(ctx, each_value_3, i));
-	}
-
-	let each_value_2 = /*forecasts*/ ctx[0];
-	let each_blocks_2 = [];
-
-	for (let i = 0; i < each_value_2.length; i += 1) {
-		each_blocks_2[i] = create_each_block_2(get_each_context_2(ctx, each_value_2, i));
-	}
-
-	let each_value_1 = /*forecasts*/ ctx[0];
-	let each_blocks_1 = [];
-
-	for (let i = 0; i < each_value_1.length; i += 1) {
-		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
-	}
-
+	let div;
 	let each_value = /*forecasts*/ ctx[0];
 	let each_blocks = [];
 
@@ -37348,140 +37290,23 @@ function create_else_block(ctx) {
 
 	return {
 		c() {
-			table = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("table");
-			tr0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("tr");
-
-			for (let i = 0; i < each_blocks_3.length; i += 1) {
-				each_blocks_3[i].c();
-			}
-
-			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			tr1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("tr");
-
-			for (let i = 0; i < each_blocks_2.length; i += 1) {
-				each_blocks_2[i].c();
-			}
-
-			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			tr2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("tr");
-
-			for (let i = 0; i < each_blocks_1.length; i += 1) {
-				each_blocks_1[i].c();
-			}
-
-			t2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			tr3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("tr");
+			div = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
 			}
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(tr0, "class", "time svelte-12tuvoj");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(tr1, "class", "icons svelte-12tuvoj");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(tr2, "class", "temperature svelte-12tuvoj");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(tr3, "class", "short svelte-12tuvoj");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(table, "class", "forecast svelte-12tuvoj");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "all-forecasts svelte-kstq54");
 		},
 		m(target, anchor) {
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, table, anchor);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(table, tr0);
-
-			for (let i = 0; i < each_blocks_3.length; i += 1) {
-				each_blocks_3[i].m(tr0, null);
-			}
-
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(table, t0);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(table, tr1);
-
-			for (let i = 0; i < each_blocks_2.length; i += 1) {
-				each_blocks_2[i].m(tr1, null);
-			}
-
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(table, t1);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(table, tr2);
-
-			for (let i = 0; i < each_blocks_1.length; i += 1) {
-				each_blocks_1[i].m(tr2, null);
-			}
-
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(table, t2);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(table, tr3);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div, anchor);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].m(tr3, null);
+				each_blocks[i].m(div, null);
 			}
 		},
 		p(ctx, dirty) {
-			if (dirty & /*formatDate, forecasts*/ 9) {
-				each_value_3 = /*forecasts*/ ctx[0];
-				let i;
-
-				for (i = 0; i < each_value_3.length; i += 1) {
-					const child_ctx = get_each_context_3(ctx, each_value_3, i);
-
-					if (each_blocks_3[i]) {
-						each_blocks_3[i].p(child_ctx, dirty);
-					} else {
-						each_blocks_3[i] = create_each_block_3(child_ctx);
-						each_blocks_3[i].c();
-						each_blocks_3[i].m(tr0, null);
-					}
-				}
-
-				for (; i < each_blocks_3.length; i += 1) {
-					each_blocks_3[i].d(1);
-				}
-
-				each_blocks_3.length = each_value_3.length;
-			}
-
-			if (dirty & /*getIcon, forecasts*/ 17) {
-				each_value_2 = /*forecasts*/ ctx[0];
-				let i;
-
-				for (i = 0; i < each_value_2.length; i += 1) {
-					const child_ctx = get_each_context_2(ctx, each_value_2, i);
-
-					if (each_blocks_2[i]) {
-						each_blocks_2[i].p(child_ctx, dirty);
-					} else {
-						each_blocks_2[i] = create_each_block_2(child_ctx);
-						each_blocks_2[i].c();
-						each_blocks_2[i].m(tr1, null);
-					}
-				}
-
-				for (; i < each_blocks_2.length; i += 1) {
-					each_blocks_2[i].d(1);
-				}
-
-				each_blocks_2.length = each_value_2.length;
-			}
-
-			if (dirty & /*forecasts*/ 1) {
-				each_value_1 = /*forecasts*/ ctx[0];
-				let i;
-
-				for (i = 0; i < each_value_1.length; i += 1) {
-					const child_ctx = get_each_context_1(ctx, each_value_1, i);
-
-					if (each_blocks_1[i]) {
-						each_blocks_1[i].p(child_ctx, dirty);
-					} else {
-						each_blocks_1[i] = create_each_block_1(child_ctx);
-						each_blocks_1[i].c();
-						each_blocks_1[i].m(tr2, null);
-					}
-				}
-
-				for (; i < each_blocks_1.length; i += 1) {
-					each_blocks_1[i].d(1);
-				}
-
-				each_blocks_1.length = each_value_1.length;
-			}
-
-			if (dirty & /*forecasts*/ 1) {
+			if (dirty & /*forecasts, getIcon, formatDate*/ 25) {
 				each_value = /*forecasts*/ ctx[0];
 				let i;
 
@@ -37493,7 +37318,7 @@ function create_else_block(ctx) {
 					} else {
 						each_blocks[i] = create_each_block(child_ctx);
 						each_blocks[i].c();
-						each_blocks[i].m(tr3, null);
+						each_blocks[i].m(div, null);
 					}
 				}
 
@@ -37505,16 +37330,13 @@ function create_else_block(ctx) {
 			}
 		},
 		d(detaching) {
-			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(table);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["destroy_each"])(each_blocks_3, detaching);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["destroy_each"])(each_blocks_2, detaching);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["destroy_each"])(each_blocks_1, detaching);
+			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(div);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["destroy_each"])(each_blocks, detaching);
 		}
 	};
 }
 
-// (82:0) {#if isEmpty(forecasts)}
+// (88:0) {#if isEmpty(forecasts)}
 function create_if_block(ctx) {
 	let p;
 
@@ -37533,52 +37355,71 @@ function create_if_block(ctx) {
 	};
 }
 
-// (87:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
-function create_each_block_3(ctx) {
-	let td;
-	let t_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "";
-	let t;
-
-	return {
-		c() {
-			td = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("td");
-			t = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t_value);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(td, "class", "svelte-12tuvoj");
-		},
-		m(target, anchor) {
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, td, anchor);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, t);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && t_value !== (t_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t, t_value);
-		},
-		d(detaching) {
-			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(td);
-		}
-	};
-}
-
 // (92:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
-function create_each_block_2(ctx) {
-	let td;
+function create_each_block(ctx) {
+	let div4;
+	let div0;
+	let t0_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "";
+	let t0;
+	let t1;
+	let div1;
 	let img;
 	let img_src_value;
 	let img_alt_value;
+	let t2;
+	let div2;
+	let t3_value = /*Temperature*/ ctx[12] + "";
+	let t3;
+	let t4;
+	let t5;
+	let div3;
+	let t6_value = /*ShortForecast*/ ctx[13] + "";
+	let t6;
+	let t7;
 
 	return {
 		c() {
-			td = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("td");
+			div4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
+			div0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
+			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t0_value);
+			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
+			div1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
 			img = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("img");
+			t2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
+			div2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
+			t3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t3_value);
+			t4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("°");
+			t5 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
+			div3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
+			t6 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t6_value);
+			t7 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div0, "class", "time row svelte-kstq54");
 			if (img.src !== (img_src_value = /*getIcon*/ ctx[4](/*IsDaytime*/ ctx[11]))) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value = /*ShortForecast*/ ctx[13]);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "class", "svelte-12tuvoj");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(td, "class", "svelte-12tuvoj");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div1, "class", "icons row svelte-kstq54");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div2, "class", "temperature row svelte-kstq54");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div3, "class", "short row svelte-kstq54");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div4, "class", "forecast svelte-kstq54");
 		},
 		m(target, anchor) {
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, td, anchor);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, img);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div4, anchor);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, div0);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div0, t0);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, t1);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, div1);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div1, img);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, t2);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, div2);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div2, t3);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div2, t4);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, t5);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, div3);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div3, t6);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, t7);
 		},
 		p(ctx, dirty) {
+			if (dirty & /*forecasts*/ 1 && t0_value !== (t0_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t0, t0_value);
+
 			if (dirty & /*forecasts*/ 1 && img.src !== (img_src_value = /*getIcon*/ ctx[4](/*IsDaytime*/ ctx[11]))) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
 			}
@@ -37586,62 +37427,12 @@ function create_each_block_2(ctx) {
 			if (dirty & /*forecasts*/ 1 && img_alt_value !== (img_alt_value = /*ShortForecast*/ ctx[13])) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value);
 			}
+
+			if (dirty & /*forecasts*/ 1 && t3_value !== (t3_value = /*Temperature*/ ctx[12] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t3, t3_value);
+			if (dirty & /*forecasts*/ 1 && t6_value !== (t6_value = /*ShortForecast*/ ctx[13] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t6, t6_value);
 		},
 		d(detaching) {
-			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(td);
-		}
-	};
-}
-
-// (98:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
-function create_each_block_1(ctx) {
-	let td;
-	let t0_value = /*Temperature*/ ctx[12] + "";
-	let t0;
-	let t1;
-
-	return {
-		c() {
-			td = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("td");
-			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t0_value);
-			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("°");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(td, "class", "svelte-12tuvoj");
-		},
-		m(target, anchor) {
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, td, anchor);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, t0);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, t1);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && t0_value !== (t0_value = /*Temperature*/ ctx[12] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t0, t0_value);
-		},
-		d(detaching) {
-			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(td);
-		}
-	};
-}
-
-// (103:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
-function create_each_block(ctx) {
-	let td;
-	let t_value = /*ShortForecast*/ ctx[13] + "";
-	let t;
-
-	return {
-		c() {
-			td = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("td");
-			t = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t_value);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(td, "class", "svelte-12tuvoj");
-		},
-		m(target, anchor) {
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, td, anchor);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, t);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && t_value !== (t_value = /*ShortForecast*/ ctx[13] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t, t_value);
-		},
-		d(detaching) {
-			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(td);
+			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(div4);
 		}
 	};
 }
@@ -37677,12 +37468,12 @@ function create_fragment(ctx) {
 			t3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
 
-			p.innerHTML = `Powered by IPFS oracle on <a href="https://orbs.com" class="svelte-12tuvoj">ORBS</a>:
-<a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank" class="svelte-12tuvoj">blockchain node changes</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank" class="svelte-12tuvoj">oracle worker source</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank" class="svelte-12tuvoj">smart contract source</a>`;
+			p.innerHTML = `Powered by IPFS oracle on <a href="https://orbs.com" class="svelte-kstq54">ORBS</a>:
+<a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank" class="svelte-kstq54">blockchain node changes</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank" class="svelte-kstq54">oracle worker source</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank" class="svelte-kstq54">smart contract source</a>`;
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "centered svelte-12tuvoj");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "centered svelte-kstq54");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div, anchor);
