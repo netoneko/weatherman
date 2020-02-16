@@ -3,6 +3,8 @@ import moment from "moment";
 import { isEmpty, lowerFirst } from "lodash";
 
 export let weatherman;
+export let i;
+
 let forecasts = [];
 let updatedAt = null;
 let hash = "";
@@ -19,6 +21,8 @@ const formatDate = (date) => moment(date).format("hh:mm A");// moment(date).cale
 const getIcon = (isDaytime) => isDaytime ? "./land_day.svg" : "./land_night.svg";
 
 const lastUpdatedAt = () => lowerFirst(moment(Number(updatedAt / BigInt(1000000))).calendar());
+
+const sourceURL = (hash) => `${i}/api/v0/block/get/${hash}`;
 </script>
 
 <style>
@@ -72,9 +76,8 @@ a {
 </style>
 <div class="centered">
 <h2>Weather in Denver for the next 12 hours</h2>
-
 {#if updatedAt}
-<p>Last updated {lastUpdatedAt()}</p>
+<p>Last updated <a href="{sourceURL(hash)}" target="_blank" title="source data">{lastUpdatedAt()}</a></p>
 {/if}
 {#if isEmpty(forecasts)}
 <p>Loading...</p>

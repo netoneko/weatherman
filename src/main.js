@@ -35,10 +35,12 @@ const orbsClient = new Client(
 const WEATHERMAN_CONTRACT_NAME = process.env.ORBS_WEATHERMAN_CONTRACT || "Weatherman";
 const weatherman = new Weatherman(orbsClient, WEATHERMAN_CONTRACT_NAME);
 
+const IPFS_ENDPOINT = process.env.IPFS_ENDPOINT || "http://localhost:5001";
 const app = new App({
   target: document.body,
   props: {
     weatherman,
+    i: IPFS_ENDPOINT,
   }
 });
 
