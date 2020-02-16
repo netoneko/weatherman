@@ -37244,16 +37244,34 @@ function get_each_context(ctx, list, i) {
 // (80:0) {#if updatedAt}
 function create_if_block_1(ctx) {
 	let p;
+	let t0;
+	let a;
+	let t1_value = /*lastUpdatedAt*/ ctx[5]() + "";
+	let t1;
+	let a_href_value;
 
 	return {
 		c() {
 			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
-			p.textContent = `Last updated ${/*lastUpdatedAt*/ ctx[5]()}`;
+			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Last updated ");
+			a = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
+			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t1_value);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]));
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "target", "_blank");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "title", "raw data");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "svelte-1hjv18z");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, p, anchor);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t0);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(a, t1);
 		},
-		p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__["noop"],
+		p(ctx, dirty) {
+			if (dirty & /*hash*/ 4 && a_href_value !== (a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]))) {
+				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value);
+			}
+		},
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(p);
 		}
@@ -37427,18 +37445,6 @@ function create_fragment(ctx) {
 	let show_if;
 	let t3;
 	let p;
-	let t4;
-	let a0;
-	let t6;
-	let a1;
-	let t8;
-	let a2;
-	let t10;
-	let a3;
-	let t12;
-	let a4;
-	let t13;
-	let a4_href_value;
 	let if_block0 = /*updatedAt*/ ctx[1] && create_if_block_1(ctx);
 
 	function select_block_type(ctx, dirty) {
@@ -37461,35 +37467,12 @@ function create_fragment(ctx) {
 			if_block1.c();
 			t3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
-			t4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Powered by IPFS oracle on ");
-			a0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
-			a0.textContent = "ORBS";
-			t6 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(":\n");
-			a1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
-			a1.textContent = "blockchain node changes";
-			t8 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(",\n");
-			a2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
-			a2.textContent = "oracle worker source";
-			t10 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(",\n");
-			a3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
-			a3.textContent = "smart contract source";
-			t12 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(",\n");
-			a4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
-			t13 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("raw data");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a0, "href", "https://orbs.com");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a0, "class", "svelte-1hjv18z");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a1, "href", "https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a1, "target", "_blank");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a1, "class", "svelte-1hjv18z");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a2, "href", "https://github.com/netoneko/weatherman/blob/master/src/worker.js");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a2, "target", "_blank");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a2, "class", "svelte-1hjv18z");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a3, "href", "https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a3, "target", "_blank");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a3, "class", "svelte-1hjv18z");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "href", a4_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]));
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "target", "_blank");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "class", "svelte-1hjv18z");
+
+			p.innerHTML = `Powered by IPFS oracle on <a href="https://orbs.com" class="svelte-1hjv18z">ORBS</a>:
+<a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank" class="svelte-1hjv18z">blockchain node changes</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank" class="svelte-1hjv18z">oracle worker source</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank" class="svelte-1hjv18z">smart contract source</a>`;
+
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "centered svelte-1hjv18z");
 		},
 		m(target, anchor) {
@@ -37501,17 +37484,6 @@ function create_fragment(ctx) {
 			if_block1.m(div, null);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, t3);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, p);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t4);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a0);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t6);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a1);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t8);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a2);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t10);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a3);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t12);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a4);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(a4, t13);
 		},
 		p(ctx, [dirty]) {
 			if (/*updatedAt*/ ctx[1]) {
@@ -37537,10 +37509,6 @@ function create_fragment(ctx) {
 					if_block1.c();
 					if_block1.m(div, t3);
 				}
-			}
-
-			if (dirty & /*hash*/ 4 && a4_href_value !== (a4_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]))) {
-				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "href", a4_href_value);
 			}
 		},
 		i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__["noop"],
