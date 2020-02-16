@@ -27,31 +27,30 @@ const sourceURL = (hash) => `${i}/api/v0/block/get/${hash}`;
 
 <style>
 .centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  max-width: calc(6.5*120px);
+}
+
+.all-forecasts {
+    max-width: calc(6.5*120px);
 }
 
 .forecast {
-    border-collapse: collapse;
-}
-
-.forecast td {
     padding: 5px;
+    width: 120px;
+    display: inline-block;
 }
 
-.time td {
+.time {
     background-color: #e2c044;
-    /* min-width: 80px; */
+    padding: 5px;
 }
 
 .icons {
     background-color: whitesmoke;
 }
 
-.icons td img {
+.icons {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -61,12 +60,14 @@ const sourceURL = (hash) => `${i}/api/v0/block/get/${hash}`;
     font-size: 2em;
     background-color: #587b7f;
     color: white;
+    padding: 5px;
 }
 
 
 .short {
     background-color: #587b7f;
     color: white;
+    padding: 5px;
 }
 
 a {
@@ -77,39 +78,35 @@ a {
 <div class="centered">
 <h2>Weather in Denver for the next 12 hours</h2>
 {#if updatedAt}
-<p>Last updated <a href="{sourceURL(hash)}" target="_blank" title="source data">{lastUpdatedAt()}</a></p>
+<p>Last updated {lastUpdatedAt()}</p>
 {/if}
 {#if isEmpty(forecasts)}
 <p>Loading...</p>
 {:else}
-<table class="forecast">
-<tr class="time">
+<div class="all-forecasts">
 {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon } }
-<td>{formatDate(StartTime)}</td>
+<div class="forecast">
+<div class="time row">
+{formatDate(StartTime)}
+</div>
+<div class="icons row">
+<img src="{getIcon(IsDaytime)}" alt="{ShortForecast}" />
+</div>
+<div class="temperature row">
+{Temperature}°
+</div>
+<div class="short row">
+{ShortForecast}
+</div>
+</div>
 {/each}
-</tr>
-<tr class="icons">
-{#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon } }
-<!-- <td><img src="{resizeIcon(Icon, "small")}" alt="{ShortForecast}" /></td> -->
-<td><img src="{getIcon(IsDaytime)}" alt="{ShortForecast}" /></td>
-{/each}
-</tr>
-<tr class="temperature">
-{#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon } }
-<td>{Temperature}°</td>
-{/each}
-</tr>
-<tr class="short">
-{#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon } }
-<td>{ShortForecast}</td>
-{/each}
-</tr>
-</table>
+</div>
 {/if}
 
 <p>Powered by IPFS oracle on <a href="https://orbs.com">ORBS</a>:
 <a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank">blockchain node changes</a>,
 <a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank">oracle worker source</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank">smart contract source</a>
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank">smart contract source</a>,
+<a href="{sourceURL(hash)}" target="_blank">raw data</a>
 </p>
 </div>
