@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".centered.svelte-1hjv18z{margin:0 auto;max-width:calc(6.5*120px)}.all-forecasts.svelte-1hjv18z{max-width:calc(6.5*120px)}.forecast.svelte-1hjv18z{padding:5px;width:120px;display:inline-block}.time.svelte-1hjv18z{background-color:#e2c044;padding:5px}.icons.svelte-1hjv18z{background-color:whitesmoke}.icons.svelte-1hjv18z{display:block;margin-left:auto;margin-right:auto}.temperature.svelte-1hjv18z{font-size:2em;background-color:#587b7f;color:white;padding:5px}.short.svelte-1hjv18z{background-color:#587b7f;color:white;padding:5px}a.svelte-1hjv18z{color:#1e2019}", ""]);
+exports.push([module.i, ".centered.svelte-1bym3wq{margin:0 auto;max-width:calc(6.5*120px)}.all-forecasts.svelte-1bym3wq{max-width:calc(6.5*120px)}.forecast.svelte-1bym3wq{padding:5px;width:120px;display:inline-block}.time.svelte-1bym3wq{background-color:#e2c044;padding:5px}.icons.svelte-1bym3wq{background-color:whitesmoke}.icons.svelte-1bym3wq{display:block;margin-left:auto;margin-right:auto}.temperature.svelte-1bym3wq{font-size:2em;background-color:#587b7f;color:white;padding:5px}.short.svelte-1bym3wq{background-color:#587b7f;color:white;padding:5px}a.svelte-1bym3wq{color:#1e2019}.recommendation.svelte-1bym3wq{font-style:italic}", ""]);
 
 
 
@@ -37233,20 +37233,20 @@ __webpack_require__.r(__webpack_exports__);
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[10] = list[i].StartTime;
-	child_ctx[11] = list[i].IsDaytime;
-	child_ctx[12] = list[i].Temperature;
-	child_ctx[13] = list[i].ShortForecast;
-	child_ctx[14] = list[i].Icon;
+	child_ctx[14] = list[i].StartTime;
+	child_ctx[15] = list[i].IsDaytime;
+	child_ctx[16] = list[i].Temperature;
+	child_ctx[17] = list[i].ShortForecast;
+	child_ctx[18] = list[i].Icon;
 	return child_ctx;
 }
 
-// (80:0) {#if updatedAt}
-function create_if_block_1(ctx) {
+// (94:0) {#if updatedAt}
+function create_if_block_2(ctx) {
 	let p;
 	let t0;
 	let a;
-	let t1_value = /*lastUpdatedAt*/ ctx[5]() + "";
+	let t1_value = /*lastUpdatedAt*/ ctx[6]() + "";
 	let t1;
 	let a_href_value;
 
@@ -37256,10 +37256,10 @@ function create_if_block_1(ctx) {
 			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Last updated ");
 			a = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
 			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t1_value);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]));
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value = /*sourceURL*/ ctx[7](/*hash*/ ctx[2]));
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "target", "_blank");
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "title", "raw data");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "svelte-1bym3wq");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, p, anchor);
@@ -37268,7 +37268,7 @@ function create_if_block_1(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(a, t1);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*hash*/ 4 && a_href_value !== (a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]))) {
+			if (dirty & /*hash*/ 4 && a_href_value !== (a_href_value = /*sourceURL*/ ctx[7](/*hash*/ ctx[2]))) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value);
 			}
 		},
@@ -37278,7 +37278,31 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (85:0) {:else}
+// (98:0) {#if recommendation}
+function create_if_block_1(ctx) {
+	let p;
+	let t;
+
+	return {
+		c() {
+			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
+			t = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(/*recommendation*/ ctx[3]);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(p, "class", "recommendation svelte-1bym3wq");
+		},
+		m(target, anchor) {
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, p, anchor);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*recommendation*/ 8) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t, /*recommendation*/ ctx[3]);
+		},
+		d(detaching) {
+			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(p);
+		}
+	};
+}
+
+// (104:0) {:else}
 function create_else_block(ctx) {
 	let div;
 	let each_value = /*forecasts*/ ctx[0];
@@ -37296,7 +37320,7 @@ function create_else_block(ctx) {
 				each_blocks[i].c();
 			}
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "all-forecasts svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "all-forecasts svelte-1bym3wq");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div, anchor);
@@ -37306,7 +37330,7 @@ function create_else_block(ctx) {
 			}
 		},
 		p(ctx, dirty) {
-			if (dirty & /*forecasts, getIcon, formatDate*/ 25) {
+			if (dirty & /*forecasts, getIcon, formatDate*/ 49) {
 				each_value = /*forecasts*/ ctx[0];
 				let i;
 
@@ -37336,7 +37360,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (83:0) {#if isEmpty(forecasts)}
+// (102:0) {#if isEmpty(forecasts)}
 function create_if_block(ctx) {
 	let p;
 
@@ -37355,11 +37379,11 @@ function create_if_block(ctx) {
 	};
 }
 
-// (87:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
+// (106:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
 function create_each_block(ctx) {
 	let div4;
 	let div0;
-	let t0_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "";
+	let t0_value = /*formatDate*/ ctx[4](/*StartTime*/ ctx[14]) + "";
 	let t0;
 	let t1;
 	let div1;
@@ -37368,12 +37392,12 @@ function create_each_block(ctx) {
 	let img_alt_value;
 	let t2;
 	let div2;
-	let t3_value = /*Temperature*/ ctx[12] + "";
+	let t3_value = /*Temperature*/ ctx[16] + "";
 	let t3;
 	let t4;
 	let t5;
 	let div3;
-	let t6_value = /*ShortForecast*/ ctx[13] + "";
+	let t6_value = /*ShortForecast*/ ctx[17] + "";
 	let t6;
 	let t7;
 
@@ -37393,13 +37417,13 @@ function create_each_block(ctx) {
 			div3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
 			t6 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t6_value);
 			t7 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div0, "class", "time row svelte-1hjv18z");
-			if (img.src !== (img_src_value = /*getIcon*/ ctx[4](/*IsDaytime*/ ctx[11]))) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value = /*ShortForecast*/ ctx[13]);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div1, "class", "icons row svelte-1hjv18z");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div2, "class", "temperature row svelte-1hjv18z");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div3, "class", "short row svelte-1hjv18z");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div4, "class", "forecast svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div0, "class", "time row svelte-1bym3wq");
+			if (img.src !== (img_src_value = /*getIcon*/ ctx[5](/*IsDaytime*/ ctx[15]))) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value = /*ShortForecast*/ ctx[17]);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div1, "class", "icons row svelte-1bym3wq");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div2, "class", "temperature row svelte-1bym3wq");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div3, "class", "short row svelte-1bym3wq");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div4, "class", "forecast svelte-1bym3wq");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div4, anchor);
@@ -37418,18 +37442,18 @@ function create_each_block(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div4, t7);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && t0_value !== (t0_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t0, t0_value);
+			if (dirty & /*forecasts*/ 1 && t0_value !== (t0_value = /*formatDate*/ ctx[4](/*StartTime*/ ctx[14]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t0, t0_value);
 
-			if (dirty & /*forecasts*/ 1 && img.src !== (img_src_value = /*getIcon*/ ctx[4](/*IsDaytime*/ ctx[11]))) {
+			if (dirty & /*forecasts*/ 1 && img.src !== (img_src_value = /*getIcon*/ ctx[5](/*IsDaytime*/ ctx[15]))) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
 			}
 
-			if (dirty & /*forecasts*/ 1 && img_alt_value !== (img_alt_value = /*ShortForecast*/ ctx[13])) {
+			if (dirty & /*forecasts*/ 1 && img_alt_value !== (img_alt_value = /*ShortForecast*/ ctx[17])) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value);
 			}
 
-			if (dirty & /*forecasts*/ 1 && t3_value !== (t3_value = /*Temperature*/ ctx[12] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t3, t3_value);
-			if (dirty & /*forecasts*/ 1 && t6_value !== (t6_value = /*ShortForecast*/ ctx[13] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t6, t6_value);
+			if (dirty & /*forecasts*/ 1 && t3_value !== (t3_value = /*Temperature*/ ctx[16] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t3, t3_value);
+			if (dirty & /*forecasts*/ 1 && t6_value !== (t6_value = /*ShortForecast*/ ctx[17] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t6, t6_value);
 		},
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(div4);
@@ -37442,10 +37466,12 @@ function create_fragment(ctx) {
 	let h2;
 	let t1;
 	let t2;
-	let show_if;
 	let t3;
+	let show_if;
+	let t4;
 	let p;
-	let if_block0 = /*updatedAt*/ ctx[1] && create_if_block_1(ctx);
+	let if_block0 = /*updatedAt*/ ctx[1] && create_if_block_2(ctx);
+	let if_block1 = /*recommendation*/ ctx[3] && create_if_block_1(ctx);
 
 	function select_block_type(ctx, dirty) {
 		if (show_if == null || dirty & /*forecasts*/ 1) show_if = !!Object(lodash__WEBPACK_IMPORTED_MODULE_2__["isEmpty"])(/*forecasts*/ ctx[0]);
@@ -37454,7 +37480,7 @@ function create_fragment(ctx) {
 	}
 
 	let current_block_type = select_block_type(ctx, -1);
-	let if_block1 = current_block_type(ctx);
+	let if_block2 = current_block_type(ctx);
 
 	return {
 		c() {
@@ -37464,16 +37490,20 @@ function create_fragment(ctx) {
 			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			if (if_block0) if_block0.c();
 			t2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			if_block1.c();
+			if (if_block1) if_block1.c();
 			t3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
+			if_block2.c();
+			t4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
 
-			p.innerHTML = `Powered by IPFS oracle on <a href="https://orbs.com" class="svelte-1hjv18z">ORBS</a>:
-<a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank" class="svelte-1hjv18z">blockchain node changes</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank" class="svelte-1hjv18z">oracle worker source</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank" class="svelte-1hjv18z">smart contract source</a>`;
+			p.innerHTML = `Powered by IPFS oracle on <a href="https://orbs.com" class="svelte-1bym3wq">ORBS</a>:
+<a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank" class="svelte-1bym3wq">blockchain node changes</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank" class="svelte-1bym3wq">oracle worker source</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank" class="svelte-1bym3wq">forecast data processing contract source</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/advice/contract.go" target="_blank" class="svelte-1bym3wq">dependent recommendation contract source</a>, and
+<a href="https://www.demos.orbs.network" taget="_blank" class="svelte-1bym3wq">other ORBS demos</a>`;
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "centered svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "centered svelte-1bym3wq");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div, anchor);
@@ -37481,8 +37511,10 @@ function create_fragment(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, t1);
 			if (if_block0) if_block0.m(div, null);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, t2);
-			if_block1.m(div, null);
+			if (if_block1) if_block1.m(div, null);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, t3);
+			if_block2.m(div, null);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, t4);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, p);
 		},
 		p(ctx, [dirty]) {
@@ -37490,7 +37522,7 @@ function create_fragment(ctx) {
 				if (if_block0) {
 					if_block0.p(ctx, dirty);
 				} else {
-					if_block0 = create_if_block_1(ctx);
+					if_block0 = create_if_block_2(ctx);
 					if_block0.c();
 					if_block0.m(div, t2);
 				}
@@ -37499,15 +37531,28 @@ function create_fragment(ctx) {
 				if_block0 = null;
 			}
 
-			if (current_block_type === (current_block_type = select_block_type(ctx, dirty)) && if_block1) {
-				if_block1.p(ctx, dirty);
-			} else {
-				if_block1.d(1);
-				if_block1 = current_block_type(ctx);
-
+			if (/*recommendation*/ ctx[3]) {
 				if (if_block1) {
+					if_block1.p(ctx, dirty);
+				} else {
+					if_block1 = create_if_block_1(ctx);
 					if_block1.c();
 					if_block1.m(div, t3);
+				}
+			} else if (if_block1) {
+				if_block1.d(1);
+				if_block1 = null;
+			}
+
+			if (current_block_type === (current_block_type = select_block_type(ctx, dirty)) && if_block2) {
+				if_block2.p(ctx, dirty);
+			} else {
+				if_block2.d(1);
+				if_block2 = current_block_type(ctx);
+
+				if (if_block2) {
+					if_block2.c();
+					if_block2.m(div, t4);
 				}
 			}
 		},
@@ -37516,7 +37561,8 @@ function create_fragment(ctx) {
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(div);
 			if (if_block0) if_block0.d();
-			if_block1.d();
+			if (if_block1) if_block1.d();
+			if_block2.d();
 		}
 	};
 }
@@ -37524,14 +37570,19 @@ function create_fragment(ctx) {
 function instance($$self, $$props, $$invalidate) {
 	let { weatherman } = $$props;
 	let { oracleEndpoint } = $$props;
+	let { advice } = $$props;
 	let forecasts = [];
 	let updatedAt = null;
 	let hash = "";
+	let recommendation = null;
 
-	(async () => {
-		$$invalidate(2, [hash, updatedAt] = await weatherman.getDatasource(), hash, $$invalidate(1, updatedAt));
-		$$invalidate(0, forecasts = await weatherman.getWeather(hash, 12));
-	})();
+	const updateForecast = async (hash, hours) => {
+		$$invalidate(0, forecasts = await weatherman.getWeather(hash, hours));
+	};
+
+	const updateRecommendation = async (hash, hours) => {
+		$$invalidate(3, recommendation = await advice.getAdvice(weatherman.contractName, hash, hours));
+	};
 
 	const resizeIcon = (icon, size) => icon.replace("small", size);
 	const formatDate = date => moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format("hh:mm A"); // moment(date).calendar();
@@ -37539,28 +37590,42 @@ function instance($$self, $$props, $$invalidate) {
 	const lastUpdatedAt = () => Object(lodash__WEBPACK_IMPORTED_MODULE_2__["lowerFirst"])(moment__WEBPACK_IMPORTED_MODULE_1___default()(Number(updatedAt / BigInt(1000000))).calendar());
 	const sourceURL = hash => `${oracleEndpoint}/${hash}`;
 
+	(async () => {
+		$$invalidate(2, [hash, updatedAt] = await weatherman.getDatasource(), hash, $$invalidate(1, updatedAt));
+		updateForecast(hash, 12);
+		updateRecommendation(hash, 12);
+	})();
+
 	$$self.$set = $$props => {
-		if ("weatherman" in $$props) $$invalidate(7, weatherman = $$props.weatherman);
-		if ("oracleEndpoint" in $$props) $$invalidate(8, oracleEndpoint = $$props.oracleEndpoint);
+		if ("weatherman" in $$props) $$invalidate(8, weatherman = $$props.weatherman);
+		if ("oracleEndpoint" in $$props) $$invalidate(9, oracleEndpoint = $$props.oracleEndpoint);
+		if ("advice" in $$props) $$invalidate(10, advice = $$props.advice);
 	};
 
 	return [
 		forecasts,
 		updatedAt,
 		hash,
+		recommendation,
 		formatDate,
 		getIcon,
 		lastUpdatedAt,
 		sourceURL,
 		weatherman,
-		oracleEndpoint
+		oracleEndpoint,
+		advice
 	];
 }
 
 class App extends svelte_internal__WEBPACK_IMPORTED_MODULE_0__["SvelteComponent"] {
 	constructor(options) {
 		super();
-		Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["init"])(this, options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__["safe_not_equal"], { weatherman: 7, oracleEndpoint: 8 });
+
+		Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["init"])(this, options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__["safe_not_equal"], {
+			weatherman: 8,
+			oracleEndpoint: 9,
+			advice: 10
+		});
 	}
 }
 
@@ -37604,6 +37669,53 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./src/advice.js":
+/*!***********************!*\
+  !*** ./src/advice.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+const { argString, argBytes, argUint64, argUint32 } = __webpack_require__(/*! orbs-client-sdk */ "./node_modules/orbs-client-sdk/dist/orbs-client-sdk-web.js");
+
+function getErrorFromReceipt(receipt) {
+    const value = receipt.outputArguments.length == 0 ? receipt.executionResult : receipt.outputArguments[0].value;
+    return new Error(value);
+}
+
+class Advice {
+	constructor(orbsClient, contractName) {
+		this.client = orbsClient;
+		this.contractName = contractName;
+	}
+
+	async getAdvice(weathermanContractName, hash, hours) {
+		const query = await this.client.createQuery(
+			this.contractName,
+			"getAdvice",
+			[
+				argString(weathermanContractName),
+				argString(hash),
+				argUint32(hours)
+			]
+		);
+
+		const receipt = await this.client.sendQuery(query);
+		if (receipt.executionResult !== 'SUCCESS') {
+			throw getErrorFromReceipt(receipt);
+		}
+
+		return receipt.outputArguments[0].value;
+	}
+}
+
+module.exports = {
+	Advice
+};
+
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
@@ -37616,8 +37728,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _App_svelte__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.svelte */ "./src/App.svelte");
 /* harmony import */ var _weatherman__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./weatherman */ "./src/weatherman.js");
 /* harmony import */ var _weatherman__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_weatherman__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! orbs-client-sdk */ "./node_modules/orbs-client-sdk/dist/orbs-client-sdk-web.js");
-/* harmony import */ var orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _advice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./advice */ "./src/advice.js");
+/* harmony import */ var _advice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_advice__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! orbs-client-sdk */ "./node_modules/orbs-client-sdk/dist/orbs-client-sdk-web.js");
+/* harmony import */ var orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -37627,20 +37742,20 @@ const SENDER_PRIVATE_KEY = "sender_private_key";
 const SENDER_ADDRESS = "sender_address";
 
 if (!localStorage.getItem(SENDER_PUBLIC_KEY)) {
-  const sender = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["createAccount"])();
-  localStorage.setItem(SENDER_PUBLIC_KEY, Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["encodeHex"])(sender.publicKey));
-  localStorage.setItem(SENDER_PRIVATE_KEY, Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["encodeHex"])(sender.privateKey));
+  const sender = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["createAccount"])();
+  localStorage.setItem(SENDER_PUBLIC_KEY, Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["encodeHex"])(sender.publicKey));
+  localStorage.setItem(SENDER_PRIVATE_KEY, Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["encodeHex"])(sender.privateKey));
   localStorage.setItem(SENDER_ADDRESS, sender.address);
 }
 
-const publicKey = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["decodeHex"])(localStorage.getItem(SENDER_PUBLIC_KEY));
-const privateKey = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["decodeHex"])(localStorage.getItem(SENDER_PRIVATE_KEY));
+const publicKey = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["decodeHex"])(localStorage.getItem(SENDER_PUBLIC_KEY));
+const privateKey = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["decodeHex"])(localStorage.getItem(SENDER_PRIVATE_KEY));
 const address = localStorage.getItem(SENDER_ADDRESS);
-const orbsClient = new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["Client"](
+const orbsClient = new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["Client"](
   "https://node2.demonet.orbs.com/vchains/1003",
   "1003",
   "TEST_NET",
-  new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["LocalSigner"]({
+  new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["LocalSigner"]({
       publicKey, 
       privateKey,
   })
@@ -37649,11 +37764,15 @@ const orbsClient = new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["Client"](
 const WEATHERMAN_CONTRACT_NAME = "Weatherman" || false;
 const weatherman = new _weatherman__WEBPACK_IMPORTED_MODULE_1__["Weatherman"](orbsClient, WEATHERMAN_CONTRACT_NAME);
 
+const ADVICE_CONTRACT_NAME = "Advice" || false;
+const advice = new _advice__WEBPACK_IMPORTED_MODULE_2__["Advice"](orbsClient, ADVICE_CONTRACT_NAME);
+
 const ORBS_ORACLE_ENDPOINT = "http://18.220.163.145:3000" || false;
 const app = new _App_svelte__WEBPACK_IMPORTED_MODULE_0__["default"]({
   target: document.body,
   props: {
     weatherman,
+    advice,
     oracleEndpoint: ORBS_ORACLE_ENDPOINT,
   }
 });
