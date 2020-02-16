@@ -1,5 +1,6 @@
 import App from "./App.svelte";
 import { Weatherman } from "./weatherman";
+import { Advice } from "./advice";
 import {
   createAccount,
   Client,
@@ -35,11 +36,15 @@ const orbsClient = new Client(
 const WEATHERMAN_CONTRACT_NAME = process.env.ORBS_WEATHERMAN_CONTRACT || "Weatherman";
 const weatherman = new Weatherman(orbsClient, WEATHERMAN_CONTRACT_NAME);
 
+const ADVICE_CONTRACT_NAME = process.env.ORBS_ADVICE_CONTRACT || "Advice";
+const advice = new Advice(orbsClient, ADVICE_CONTRACT_NAME);
+
 const ORBS_ORACLE_ENDPOINT = process.env.ORBS_ORACLE_ENDPOINT || "http://localhost:3000";
 const app = new App({
   target: document.body,
   props: {
     weatherman,
+    advice,
     oracleEndpoint: ORBS_ORACLE_ENDPOINT,
   }
 });

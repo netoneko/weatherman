@@ -56,6 +56,7 @@ module.exports = {
       'ORBS_VCHAIN': process.env.ORBS_VCHAIN,
       'ORBS_WEATHERMAN_CONTRACT': process.env.ORBS_NOTARY_CONTRACT,
       'ORBS_ORACLE_ENDPOINT': process.env.ORBS_ORACLE_ENDPOINT,
+      'ORBS_ADVICE_CONTRACT': process.env.ORBS_ADVICE_CONTRACT,
     })
   ],
   devtool: prod ? false : 'source-map'
