@@ -33,6 +33,7 @@ async function update() {
 }
 
 update();
+const _10m = 600000;
 setInterval(update, _10m);
 
 const app = express();
