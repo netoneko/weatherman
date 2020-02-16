@@ -7,7 +7,8 @@
         "gamma:stop": "gamma-cli stop-local",
         "weatherman:local": "node ./src/deploy_weatherman.js",
         "test": "mocha test --timeout 20000 --exit",
-        "dev": "cross-env ORBS_NODE_ADDRESS=http://localhost:8080 ORBS_VCHAIN=42 ORBS_PRISM_URL=http://localhost:3000 ORBS_WEATHERMAN_CONTRACT=Weatherman webpack-dev-server --content-base public --port 9000"
+        "dev": "cross-env ORBS_NODE_ADDRESS=http://localhost:8080 ORBS_VCHAIN=42 ORBS_PRISM_URL=http://localhost:3000 ORBS_WEATHERMAN_CONTRACT=Weatherman webpack-dev-server --content-base public --port 9000",
+        "start": "node src/worker.js"
     },
     "devDependencies": {
         "expect.js": "^0.3.1",
@@ -26,11 +27,14 @@
         "webpack-cli": "^3.3.0",
         "webpack-dev-server": "^3.3.1",
         "brfs": "^2.0.2",
-        "transform-loader": "^0.2.4"
+        "transform-loader": "^0.2.4",
+        "moment": "^2.24.0"
     },
     "dependencies": {
+        "express": "^4.17.1",
+        "ipfs-http-client": "^42.0.0",
         "lodash": "^4.17.15",
-        "moment": "^2.24.0",
+        "node-fetch": "^2.6.0",
         "orbs-client-sdk": "2.3.1"
     }
 }

@@ -11,6 +11,10 @@ function getClient(signer) {
     return new Client(endpoint, chain, NetworkType.NETWORK_TYPE_TEST_NET, signer);
 }
 
+function getWeathermanContractName() {
+	return process.env.ORBS_WEATHERMAN_CONTRACT || "Weatherman";
+}
+
 // Read all go files except tests
 function getWeathermanContractCode() {
 	const dir = join(__dirname, "contract", "weatherman");
@@ -30,6 +34,7 @@ async function deployWeatherman(client, contractName) {
 module.exports = {
 	getClient,
 	getWeathermanContractCode,
+	getWeathermanContractName,
 	deployWeatherman
 }
 
@@ -37,7 +42,7 @@ if (!module.parent) {
 	(async () => {
 		try {
 			const signer = new LocalSigner(createAccount());
-			await deployWeatherman(getClient(signer), "Weatherman")
+			await deployWeatherman(getClient(signer), getWeathermanContractName())
 			console.log("Deployed Weatherman smart contract successfully");
 		} catch (e) {
 			console.error(e);
