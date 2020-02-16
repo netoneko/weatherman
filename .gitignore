@@ -1,3 +1,4 @@
 node_modules
 .ipfs
 orbs-test-keys.json
+public/bundle*
