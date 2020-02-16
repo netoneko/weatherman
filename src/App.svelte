@@ -125,6 +125,8 @@ a {
 <p>Powered by IPFS oracle on <a href="https://orbs.com">ORBS</a>:
 <a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank">blockchain node changes</a>,
 <a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank">oracle worker source</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank">smart contract source</a>
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank">forecast data processing contract source</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/advice/contract.go" target="_blank">dependent recommendation contract source</a>, and
+<a href="https://www.demos.orbs.network" taget="_blank">other ORBS demos</a>
 </p>
 </div>
