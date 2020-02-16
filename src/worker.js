@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const express = require("express");
-const ipfsClient = require('ipfs-http-client')
+const ipfsClient = require('ipfs-http-client');
 const { getClient, getWeathermanContractName } = require("./deploy_weatherman");
 const { createAccount, LocalSigner } = require("orbs-client-sdk");
 const { Weatherman } = require("./weatherman");
@@ -45,6 +45,11 @@ app.get('/', (req, res) => res.send({
         updatedAt
     }
 }));
+
+app.get('/:hash', async (req, res) => {
+    const data = await fetch(`${IPFS_ENDPOINT}/api/v0/block/get/${req.params.hash}`);
+    res.json(await data.json());
+})
 
 app.listen(PORT, () => console.log(`Oracale app listening on port ${PORT}!`))
 

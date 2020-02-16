@@ -3,7 +3,7 @@ import moment from "moment";
 import { isEmpty, lowerFirst } from "lodash";
 
 export let weatherman;
-export let i;
+export let oracleEndpoint;
 
 let forecasts = [];
 let updatedAt = null;
@@ -22,7 +22,7 @@ const getIcon = (isDaytime) => isDaytime ? "./land_day.svg" : "./land_night.svg"
 
 const lastUpdatedAt = () => lowerFirst(moment(Number(updatedAt / BigInt(1000000))).calendar());
 
-const sourceURL = (hash) => `${i}/api/v0/block/get/${hash}`;
+const sourceURL = (hash) => `${oracleEndpoint}/${hash}`;
 </script>
 
 <style>
