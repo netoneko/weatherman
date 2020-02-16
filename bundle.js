@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".centered.svelte-kstq54{margin:0 auto;max-width:calc(6.5*120px)}.all-forecasts.svelte-kstq54{max-width:calc(6.5*120px)}.forecast.svelte-kstq54{padding:5px;width:120px;display:inline-block}.time.svelte-kstq54{background-color:#e2c044;padding:5px}.icons.svelte-kstq54{background-color:whitesmoke}.icons.svelte-kstq54{display:block;margin-left:auto;margin-right:auto}.temperature.svelte-kstq54{font-size:2em;background-color:#587b7f;color:white;padding:5px}.short.svelte-kstq54{background-color:#587b7f;color:white;padding:5px}a.svelte-kstq54{color:#1e2019}", ""]);
+exports.push([module.i, ".centered.svelte-1hjv18z{margin:0 auto;max-width:calc(6.5*120px)}.all-forecasts.svelte-1hjv18z{max-width:calc(6.5*120px)}.forecast.svelte-1hjv18z{padding:5px;width:120px;display:inline-block}.time.svelte-1hjv18z{background-color:#e2c044;padding:5px}.icons.svelte-1hjv18z{background-color:whitesmoke}.icons.svelte-1hjv18z{display:block;margin-left:auto;margin-right:auto}.temperature.svelte-1hjv18z{font-size:2em;background-color:#587b7f;color:white;padding:5px}.short.svelte-1hjv18z{background-color:#587b7f;color:white;padding:5px}a.svelte-1hjv18z{color:#1e2019}", ""]);
 
 
 
@@ -37241,44 +37241,26 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (85:0) {#if updatedAt}
+// (80:0) {#if updatedAt}
 function create_if_block_1(ctx) {
 	let p;
-	let t0;
-	let a;
-	let t1_value = /*lastUpdatedAt*/ ctx[5]() + "";
-	let t1;
-	let a_href_value;
 
 	return {
 		c() {
 			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
-			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Last updated ");
-			a = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
-			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t1_value);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]));
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "target", "_blank");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "title", "source data");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "svelte-kstq54");
+			p.textContent = `Last updated ${/*lastUpdatedAt*/ ctx[5]()}`;
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, p, anchor);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t0);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(a, t1);
 		},
-		p(ctx, dirty) {
-			if (dirty & /*hash*/ 4 && a_href_value !== (a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]))) {
-				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value);
-			}
-		},
+		p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__["noop"],
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(p);
 		}
 	};
 }
 
-// (90:0) {:else}
+// (85:0) {:else}
 function create_else_block(ctx) {
 	let div;
 	let each_value = /*forecasts*/ ctx[0];
@@ -37296,7 +37278,7 @@ function create_else_block(ctx) {
 				each_blocks[i].c();
 			}
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "all-forecasts svelte-kstq54");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "all-forecasts svelte-1hjv18z");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div, anchor);
@@ -37336,7 +37318,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (88:0) {#if isEmpty(forecasts)}
+// (83:0) {#if isEmpty(forecasts)}
 function create_if_block(ctx) {
 	let p;
 
@@ -37355,7 +37337,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (92:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
+// (87:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
 function create_each_block(ctx) {
 	let div4;
 	let div0;
@@ -37393,13 +37375,13 @@ function create_each_block(ctx) {
 			div3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("div");
 			t6 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t6_value);
 			t7 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div0, "class", "time row svelte-kstq54");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div0, "class", "time row svelte-1hjv18z");
 			if (img.src !== (img_src_value = /*getIcon*/ ctx[4](/*IsDaytime*/ ctx[11]))) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value = /*ShortForecast*/ ctx[13]);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div1, "class", "icons row svelte-kstq54");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div2, "class", "temperature row svelte-kstq54");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div3, "class", "short row svelte-kstq54");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div4, "class", "forecast svelte-kstq54");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div1, "class", "icons row svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div2, "class", "temperature row svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div3, "class", "short row svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div4, "class", "forecast svelte-1hjv18z");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div4, anchor);
@@ -37445,6 +37427,18 @@ function create_fragment(ctx) {
 	let show_if;
 	let t3;
 	let p;
+	let t4;
+	let a0;
+	let t6;
+	let a1;
+	let t8;
+	let a2;
+	let t10;
+	let a3;
+	let t12;
+	let a4;
+	let t13;
+	let a4_href_value;
 	let if_block0 = /*updatedAt*/ ctx[1] && create_if_block_1(ctx);
 
 	function select_block_type(ctx, dirty) {
@@ -37467,13 +37461,36 @@ function create_fragment(ctx) {
 			if_block1.c();
 			t3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
-
-			p.innerHTML = `Powered by IPFS oracle on <a href="https://orbs.com" class="svelte-kstq54">ORBS</a>:
-<a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank" class="svelte-kstq54">blockchain node changes</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank" class="svelte-kstq54">oracle worker source</a>,
-<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank" class="svelte-kstq54">smart contract source</a>`;
-
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "centered svelte-kstq54");
+			t4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Powered by IPFS oracle on ");
+			a0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
+			a0.textContent = "ORBS";
+			t6 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(":\n");
+			a1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
+			a1.textContent = "blockchain node changes";
+			t8 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(",\n");
+			a2 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
+			a2.textContent = "oracle worker source";
+			t10 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(",\n");
+			a3 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
+			a3.textContent = "smart contract source";
+			t12 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(",\n");
+			a4 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
+			t13 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("raw data");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a0, "href", "https://orbs.com");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a0, "class", "svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a1, "href", "https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a1, "target", "_blank");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a1, "class", "svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a2, "href", "https://github.com/netoneko/weatherman/blob/master/src/worker.js");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a2, "target", "_blank");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a2, "class", "svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a3, "href", "https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a3, "target", "_blank");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a3, "class", "svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "href", a4_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]));
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "target", "_blank");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "class", "svelte-1hjv18z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "centered svelte-1hjv18z");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div, anchor);
@@ -37484,6 +37501,17 @@ function create_fragment(ctx) {
 			if_block1.m(div, null);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, t3);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(div, p);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t4);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a0);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t6);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a1);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t8);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a2);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t10);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a3);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t12);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a4);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(a4, t13);
 		},
 		p(ctx, [dirty]) {
 			if (/*updatedAt*/ ctx[1]) {
@@ -37510,6 +37538,10 @@ function create_fragment(ctx) {
 					if_block1.m(div, t3);
 				}
 			}
+
+			if (dirty & /*hash*/ 4 && a4_href_value !== (a4_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]))) {
+				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a4, "href", a4_href_value);
+			}
 		},
 		i: svelte_internal__WEBPACK_IMPORTED_MODULE_0__["noop"],
 		o: svelte_internal__WEBPACK_IMPORTED_MODULE_0__["noop"],
@@ -37523,7 +37555,7 @@ function create_fragment(ctx) {
 
 function instance($$self, $$props, $$invalidate) {
 	let { weatherman } = $$props;
-	let { i } = $$props;
+	let { oracleEndpoint } = $$props;
 	let forecasts = [];
 	let updatedAt = null;
 	let hash = "";
@@ -37537,11 +37569,11 @@ function instance($$self, $$props, $$invalidate) {
 	const formatDate = date => moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format("hh:mm A"); // moment(date).calendar();
 	const getIcon = isDaytime => isDaytime ? "./land_day.svg" : "./land_night.svg";
 	const lastUpdatedAt = () => Object(lodash__WEBPACK_IMPORTED_MODULE_2__["lowerFirst"])(moment__WEBPACK_IMPORTED_MODULE_1___default()(Number(updatedAt / BigInt(1000000))).calendar());
-	const sourceURL = hash => `${i}/api/v0/block/get/${hash}`;
+	const sourceURL = hash => `${oracleEndpoint}/${hash}`;
 
 	$$self.$set = $$props => {
 		if ("weatherman" in $$props) $$invalidate(7, weatherman = $$props.weatherman);
-		if ("i" in $$props) $$invalidate(8, i = $$props.i);
+		if ("oracleEndpoint" in $$props) $$invalidate(8, oracleEndpoint = $$props.oracleEndpoint);
 	};
 
 	return [
@@ -37553,14 +37585,14 @@ function instance($$self, $$props, $$invalidate) {
 		lastUpdatedAt,
 		sourceURL,
 		weatherman,
-		i
+		oracleEndpoint
 	];
 }
 
 class App extends svelte_internal__WEBPACK_IMPORTED_MODULE_0__["SvelteComponent"] {
 	constructor(options) {
 		super();
-		Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["init"])(this, options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__["safe_not_equal"], { weatherman: 7, i: 8 });
+		Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["init"])(this, options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__["safe_not_equal"], { weatherman: 7, oracleEndpoint: 8 });
 	}
 }
 
@@ -37649,12 +37681,12 @@ const orbsClient = new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["Client"](
 const WEATHERMAN_CONTRACT_NAME = "Weatherman" || false;
 const weatherman = new _weatherman__WEBPACK_IMPORTED_MODULE_1__["Weatherman"](orbsClient, WEATHERMAN_CONTRACT_NAME);
 
-const IPFS_ENDPOINT = "http://18.220.163.145:5001" || false;
+const ORBS_ORACLE_ENDPOINT = "http://18.220.163.145:3000" || false;
 const app = new _App_svelte__WEBPACK_IMPORTED_MODULE_0__["default"]({
   target: document.body,
   props: {
     weatherman,
-    i: IPFS_ENDPOINT,
+    oracleEndpoint: ORBS_ORACLE_ENDPOINT,
   }
 });
 
