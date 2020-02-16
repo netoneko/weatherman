@@ -37233,64 +37233,82 @@ __webpack_require__.r(__webpack_exports__);
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[8] = list[i].StartTime;
-	child_ctx[9] = list[i].IsDaytime;
-	child_ctx[10] = list[i].Temperature;
-	child_ctx[11] = list[i].ShortForecast;
-	child_ctx[12] = list[i].Icon;
+	child_ctx[10] = list[i].StartTime;
+	child_ctx[11] = list[i].IsDaytime;
+	child_ctx[12] = list[i].Temperature;
+	child_ctx[13] = list[i].ShortForecast;
+	child_ctx[14] = list[i].Icon;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[8] = list[i].StartTime;
-	child_ctx[9] = list[i].IsDaytime;
-	child_ctx[10] = list[i].Temperature;
-	child_ctx[11] = list[i].ShortForecast;
-	child_ctx[12] = list[i].Icon;
+	child_ctx[10] = list[i].StartTime;
+	child_ctx[11] = list[i].IsDaytime;
+	child_ctx[12] = list[i].Temperature;
+	child_ctx[13] = list[i].ShortForecast;
+	child_ctx[14] = list[i].Icon;
 	return child_ctx;
 }
 
 function get_each_context_2(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[8] = list[i].StartTime;
-	child_ctx[9] = list[i].IsDaytime;
-	child_ctx[10] = list[i].Temperature;
-	child_ctx[11] = list[i].ShortForecast;
-	child_ctx[12] = list[i].Icon;
+	child_ctx[10] = list[i].StartTime;
+	child_ctx[11] = list[i].IsDaytime;
+	child_ctx[12] = list[i].Temperature;
+	child_ctx[13] = list[i].ShortForecast;
+	child_ctx[14] = list[i].Icon;
 	return child_ctx;
 }
 
 function get_each_context_3(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[8] = list[i].StartTime;
-	child_ctx[9] = list[i].IsDaytime;
-	child_ctx[10] = list[i].Temperature;
-	child_ctx[11] = list[i].ShortForecast;
-	child_ctx[12] = list[i].Icon;
+	child_ctx[10] = list[i].StartTime;
+	child_ctx[11] = list[i].IsDaytime;
+	child_ctx[12] = list[i].Temperature;
+	child_ctx[13] = list[i].ShortForecast;
+	child_ctx[14] = list[i].Icon;
 	return child_ctx;
 }
 
-// (76:0) {#if updatedAt}
+// (79:0) {#if updatedAt}
 function create_if_block_1(ctx) {
 	let p;
+	let t0;
+	let a;
+	let t1_value = /*lastUpdatedAt*/ ctx[5]() + "";
+	let t1;
+	let a_href_value;
 
 	return {
 		c() {
 			p = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("p");
-			p.textContent = `Last updated ${/*lastUpdatedAt*/ ctx[4]()}`;
+			t0 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])("Last updated ");
+			a = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("a");
+			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["text"])(t1_value);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]));
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "target", "_blank");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "title", "source data");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "class", "svelte-12tuvoj");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, p, anchor);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, t0);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(p, a);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(a, t1);
 		},
-		p: svelte_internal__WEBPACK_IMPORTED_MODULE_0__["noop"],
+		p(ctx, dirty) {
+			if (dirty & /*hash*/ 4 && a_href_value !== (a_href_value = /*sourceURL*/ ctx[6](/*hash*/ ctx[2]))) {
+				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(a, "href", a_href_value);
+			}
+		},
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(p);
 		}
 	};
 }
 
-// (81:0) {:else}
+// (84:0) {:else}
 function create_else_block(ctx) {
 	let table;
 	let tr0;
@@ -37394,7 +37412,7 @@ function create_else_block(ctx) {
 			}
 		},
 		p(ctx, dirty) {
-			if (dirty & /*formatDate, forecasts*/ 5) {
+			if (dirty & /*formatDate, forecasts*/ 9) {
 				each_value_3 = /*forecasts*/ ctx[0];
 				let i;
 
@@ -37417,7 +37435,7 @@ function create_else_block(ctx) {
 				each_blocks_3.length = each_value_3.length;
 			}
 
-			if (dirty & /*getIcon, forecasts*/ 9) {
+			if (dirty & /*getIcon, forecasts*/ 17) {
 				each_value_2 = /*forecasts*/ ctx[0];
 				let i;
 
@@ -37496,7 +37514,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (79:0) {#if isEmpty(forecasts)}
+// (82:0) {#if isEmpty(forecasts)}
 function create_if_block(ctx) {
 	let p;
 
@@ -37515,10 +37533,10 @@ function create_if_block(ctx) {
 	};
 }
 
-// (84:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
+// (87:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
 function create_each_block_3(ctx) {
 	let td;
-	let t_value = /*formatDate*/ ctx[2](/*StartTime*/ ctx[8]) + "";
+	let t_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "";
 	let t;
 
 	return {
@@ -37532,7 +37550,7 @@ function create_each_block_3(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && t_value !== (t_value = /*formatDate*/ ctx[2](/*StartTime*/ ctx[8]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t, t_value);
+			if (dirty & /*forecasts*/ 1 && t_value !== (t_value = /*formatDate*/ ctx[3](/*StartTime*/ ctx[10]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t, t_value);
 		},
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(td);
@@ -37540,7 +37558,7 @@ function create_each_block_3(ctx) {
 	};
 }
 
-// (89:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
+// (92:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
 function create_each_block_2(ctx) {
 	let td;
 	let img;
@@ -37551,8 +37569,8 @@ function create_each_block_2(ctx) {
 		c() {
 			td = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("td");
 			img = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("img");
-			if (img.src !== (img_src_value = /*getIcon*/ ctx[3](/*IsDaytime*/ ctx[9]))) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value = /*ShortForecast*/ ctx[11]);
+			if (img.src !== (img_src_value = /*getIcon*/ ctx[4](/*IsDaytime*/ ctx[11]))) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value = /*ShortForecast*/ ctx[13]);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "class", "svelte-12tuvoj");
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(td, "class", "svelte-12tuvoj");
 		},
@@ -37561,11 +37579,11 @@ function create_each_block_2(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, img);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && img.src !== (img_src_value = /*getIcon*/ ctx[3](/*IsDaytime*/ ctx[9]))) {
+			if (dirty & /*forecasts*/ 1 && img.src !== (img_src_value = /*getIcon*/ ctx[4](/*IsDaytime*/ ctx[11]))) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
 			}
 
-			if (dirty & /*forecasts*/ 1 && img_alt_value !== (img_alt_value = /*ShortForecast*/ ctx[11])) {
+			if (dirty & /*forecasts*/ 1 && img_alt_value !== (img_alt_value = /*ShortForecast*/ ctx[13])) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value);
 			}
 		},
@@ -37575,10 +37593,10 @@ function create_each_block_2(ctx) {
 	};
 }
 
-// (95:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
+// (98:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
 function create_each_block_1(ctx) {
 	let td;
-	let t0_value = /*Temperature*/ ctx[10] + "";
+	let t0_value = /*Temperature*/ ctx[12] + "";
 	let t0;
 	let t1;
 
@@ -37595,7 +37613,7 @@ function create_each_block_1(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, t1);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && t0_value !== (t0_value = /*Temperature*/ ctx[10] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t0, t0_value);
+			if (dirty & /*forecasts*/ 1 && t0_value !== (t0_value = /*Temperature*/ ctx[12] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t0, t0_value);
 		},
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(td);
@@ -37603,10 +37621,10 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (100:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
+// (103:0) {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon }
 function create_each_block(ctx) {
 	let td;
-	let t_value = /*ShortForecast*/ ctx[11] + "";
+	let t_value = /*ShortForecast*/ ctx[13] + "";
 	let t;
 
 	return {
@@ -37620,7 +37638,7 @@ function create_each_block(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["append"])(td, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*forecasts*/ 1 && t_value !== (t_value = /*ShortForecast*/ ctx[11] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t, t_value);
+			if (dirty & /*forecasts*/ 1 && t_value !== (t_value = /*ShortForecast*/ ctx[13] + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t, t_value);
 		},
 		d(detaching) {
 			if (detaching) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["detach"])(td);
@@ -37714,12 +37732,13 @@ function create_fragment(ctx) {
 
 function instance($$self, $$props, $$invalidate) {
 	let { weatherman } = $$props;
+	let { i } = $$props;
 	let forecasts = [];
 	let updatedAt = null;
 	let hash = "";
 
 	(async () => {
-		$$invalidate(1, [hash, updatedAt] = await weatherman.getDatasource(), updatedAt);
+		$$invalidate(2, [hash, updatedAt] = await weatherman.getDatasource(), hash, $$invalidate(1, updatedAt));
 		$$invalidate(0, forecasts = await weatherman.getWeather(hash, 12));
 	})();
 
@@ -37727,18 +37746,30 @@ function instance($$self, $$props, $$invalidate) {
 	const formatDate = date => moment__WEBPACK_IMPORTED_MODULE_1___default()(date).format("hh:mm A"); // moment(date).calendar();
 	const getIcon = isDaytime => isDaytime ? "./land_day.svg" : "./land_night.svg";
 	const lastUpdatedAt = () => Object(lodash__WEBPACK_IMPORTED_MODULE_2__["lowerFirst"])(moment__WEBPACK_IMPORTED_MODULE_1___default()(Number(updatedAt / BigInt(1000000))).calendar());
+	const sourceURL = hash => `${i}/api/v0/block/get/${hash}`;
 
 	$$self.$set = $$props => {
-		if ("weatherman" in $$props) $$invalidate(5, weatherman = $$props.weatherman);
+		if ("weatherman" in $$props) $$invalidate(7, weatherman = $$props.weatherman);
+		if ("i" in $$props) $$invalidate(8, i = $$props.i);
 	};
 
-	return [forecasts, updatedAt, formatDate, getIcon, lastUpdatedAt, weatherman];
+	return [
+		forecasts,
+		updatedAt,
+		hash,
+		formatDate,
+		getIcon,
+		lastUpdatedAt,
+		sourceURL,
+		weatherman,
+		i
+	];
 }
 
 class App extends svelte_internal__WEBPACK_IMPORTED_MODULE_0__["SvelteComponent"] {
 	constructor(options) {
 		super();
-		Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["init"])(this, options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__["safe_not_equal"], { weatherman: 5 });
+		Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["init"])(this, options, instance, create_fragment, svelte_internal__WEBPACK_IMPORTED_MODULE_0__["safe_not_equal"], { weatherman: 7, i: 8 });
 	}
 }
 
@@ -37827,10 +37858,12 @@ const orbsClient = new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_2__["Client"](
 const WEATHERMAN_CONTRACT_NAME = "Weatherman" || false;
 const weatherman = new _weatherman__WEBPACK_IMPORTED_MODULE_1__["Weatherman"](orbsClient, WEATHERMAN_CONTRACT_NAME);
 
+const IPFS_ENDPOINT = "http://18.220.163.145:5001" || false;
 const app = new _App_svelte__WEBPACK_IMPORTED_MODULE_0__["default"]({
   target: document.body,
   props: {
     weatherman,
+    i: IPFS_ENDPOINT,
   }
 });
 
