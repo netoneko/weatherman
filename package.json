@@ -8,7 +8,12 @@
         "weatherman:local": "node ./src/deploy_weatherman.js",
         "test": "mocha test --timeout 20000 --exit",
         "dev": "cross-env ORBS_NODE_ADDRESS=http://localhost:8080 ORBS_VCHAIN=42 ORBS_PRISM_URL=http://localhost:3000 ORBS_WEATHERMAN_CONTRACT=Weatherman webpack-dev-server --content-base public --port 9000",
-        "start": "node src/worker.js"
+        "remote-dev": "cross-env ORBS_NODE_ADDRESS=http://node2.demonet.orbs.com/vchains/1003 ORBS_VCHAIN=1003 ORBS_PRISM_URL=http://localhost:3000 ORBS_WEATHERMAN_CONTRACT=Weatherman webpack-dev-server --content-base public --port 9000",
+        "start": "node src/worker.js",
+
+        "build": "cross-env ORBS_NODE_ADDRESS=http://node2.demonet.orbs.com/vchains/1003 ORBS_VCHAIN=1003 ORBS_PRISM_URL=http://localhost:3000 ORBS_WEATHERMAN_CONTRACT=Weatherman webpack",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d public"
     },
     "devDependencies": {
         "expect.js": "^0.3.1",

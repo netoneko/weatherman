@@ -1,5 +1,6 @@
 <script>
 import moment from "moment";
+import { isEmpty, lowerFirst } from "lodash";
 
 export let weatherman;
 let forecasts = [];
@@ -16,6 +17,8 @@ const resizeIcon = (icon, size) => icon.replace("small", size);
 const formatDate = (date) => moment(date).format("hh:mm A");// moment(date).calendar();
 
 const getIcon = (isDaytime) => isDaytime ? "./land_day.svg" : "./land_night.svg";
+
+const lastUpdatedAt = () => lowerFirst(moment(Number(updatedAt / BigInt(1000000))).calendar());
 </script>
 
 <style>
@@ -62,10 +65,20 @@ const getIcon = (isDaytime) => isDaytime ? "./land_day.svg" : "./land_night.svg"
     color: white;
 }
 
+a {
+    color: #1e2019;
+}
+
 </style>
 <div class="centered">
 <h2>Weather in Denver for the next 12 hours</h2>
 
+{#if updatedAt}
+<p>Last updated {lastUpdatedAt()}</p>
+{/if}
+{#if isEmpty(forecasts)}
+<p>Loading...</p>
+{:else}
 <table class="forecast">
 <tr class="time">
 {#each forecasts as { StartTime, IsDaytime, Temperature, ShortForecast, Icon } }
@@ -89,4 +102,11 @@ const getIcon = (isDaytime) => isDaytime ? "./land_day.svg" : "./land_night.svg"
 {/each}
 </tr>
 </table>
+{/if}
+
+<p>Powered by IPFS oracle on <a href="https://orbs.com">ORBS</a>:
+<a href="https://github.com/orbs-network/orbs-network-go/compare/experimental/denver-hackathon#diff-caf51ea546fd78b33ed5849164bde68e" target="_blank">blockchain node changes</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/worker.js" target="_blank">oracle worker source</a>,
+<a href="https://github.com/netoneko/weatherman/blob/master/src/contract/weatherman/contract.go" target="_blank">smart contract source</a>
+</p>
 </div>
