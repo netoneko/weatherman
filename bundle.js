@@ -37752,7 +37752,7 @@ const publicKey = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["decodeHex
 const privateKey = Object(orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["decodeHex"])(localStorage.getItem(SENDER_PRIVATE_KEY));
 const address = localStorage.getItem(SENDER_ADDRESS);
 const orbsClient = new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["Client"](
-  "https://node2.demonet.orbs.com/vchains/1003",
+  "https://node1.demonet.orbs.com/vchains/1003",
   "1003",
   "TEST_NET",
   new orbs_client_sdk__WEBPACK_IMPORTED_MODULE_3__["LocalSigner"]({
